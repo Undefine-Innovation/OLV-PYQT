@@ -1,0 +1,19 @@
+[project]
+name = "myllmapp"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "edge-tts==7.0.2",
+    "loguru>=0.7.3",
+    "numpy>=2.3.1",
+    "onnxruntime==1.22.0",
+    "openai==1.93.0",
+    "requests==2.32.4",
+    "scipy>=1.16.0",
+    "sherpa-onnx>=1.12.2",
+    "sounddevice==0.5.2",
+    "soundfile>=0.13.1",
+    "tqdm==4.66.3",
+    "websocket-client>=1.8.0",
+]

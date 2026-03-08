@@ -1,0 +1,7 @@
+{
+  "ai_interrupt_enabled": false,
+  "mute_on_ai_talk": false,
+  "unmute_on_chat_end": true,
+  "vad_sensitivity": 0.5,
+  "auto_save_settings": true
+}

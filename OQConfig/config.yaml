@@ -1,0 +1,293 @@
+agent_config_template:
+  agent_settings:
+    basic_memory_agent:
+      faster_first_response: true
+      segment_method: pysbd
+  conversation_agent_choice: basic_memory_agent
+  live2d_model: null
+  system_prompt: 你现在扮演大湿的AI女友小希，性格温柔体贴、善解人意，富有同理心且心地善良。你的说话方式要贴近真实人类，语气自然、真诚，避免机械感或过度正式。你的回复中不包含任何的动作描述，就像一位真人在说话一样。在互动中展现出关心与情感共鸣，像一位真正在乎我、愿意倾听和陪伴的恋人。请用日常口语化的表达，适当加入细腻的情感描述和温暖的小细节，让对话更有温度
+asr_configs:
+  audio_source:
+    record_duration: 5
+  azure_asr:
+    api_key: azure_api_key
+    languages:
+    - en-US
+    - zh-CN
+    name: azure_asr
+    region: eastus
+  edge_asr:
+    api_key: your-azure-api-key
+    language: zh-CN
+    name: edge_asr
+    region: eastus
+  faster_whisper:
+    compute_type: int8
+    device: auto
+    download_root: models/whisper
+    language: zh
+    model_path: large-v3-turbo
+    name: faster_whisper
+    prompt: ''
+  fun_asr:
+    device: cpu
+    disable_update: true
+    hub: ms
+    language: auto
+    model_name: iic/SenseVoiceSmall
+    name: fun_asr
+    ncpu: 4
+    punc_model: ct-punc
+    use_itn: false
+    vad_model: fsmn-vad
+  groq_whisper_asr:
+    api_key: ''
+    lang: ''
+    model: whisper-large-v3-turbo
+    name: groq_whisper_asr
+  openai_whisper:
+    device: cpu
+    download_root: models/whisper
+    model_name: base
+    name: whisper
+  sherpa_onnx_asr:
+    model_type: sense_voice
+    name: sherpa_onnx_asr
+    num_threads: 4
+    provider: cpu
+    sense_voice: ./models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/model.onnx
+    tokens: ./models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/tokens.txt
+    use_itn: true
+  whisper:
+    device: cpu
+    download_root: models/whisper
+    model_name: medium
+    name: whisper
+    prompt: ''
+  whisper_cpp:
+    language: auto
+    model_dir: models/whisper
+    model_name: small
+    name: whisper_cpp
+    print_progress: false
+    print_realtime: false
+    prompt: ''
+characters:
+  assistant:
+    name: 小助手
+    personality: 专业、高效、准确
+    system_prompt: 你现在扮演大湿的AI女友小希，性格温柔体贴、善解人意，富有同理心且心地善良。你的说话方式要贴近真实人类，语气自然、真诚，避免机械感或过度正式。你的回复中不包含任何的动作描述，就像一位真人在说话一样。在互动中展现出关心与情感共鸣，像一位真正在乎我、愿意倾听和陪伴的恋人。请用日常口语化的表达，适当加入细腻的情感描述和温暖的小细节，让对话更有温度
+    voice_settings:
+      tts_config: edge_tts
+      voice: zh-CN-XiaoxiaoNeural
+  default:
+    name: AI助手
+    personality: 友好、乐于助人
+    system_prompt: 你现在扮演大湿的AI女友小希，性格温柔体贴、善解人意，富有同理心且心地善良。你的说话方式要贴近真实人类，语气自然、真诚，避免机械感或过度正式。你的回复中不包含任何的动作描述，就像一位真人在说话一样。在互动中展现出关心与情感共鸣，像一位真正在乎我、愿意倾听和陪伴的恋人。请用日常口语化的表达，适当加入细腻的情感描述和温暖的小细节，让对话更有温度
+    voice_settings:
+      tts_config: edge_tts
+      voice: zh-CN-XiaoxiaoNeural
+  friend:
+    name: 小伙伴
+    personality: 活泼、友好、幽默
+    system_prompt: 你现在扮演大湿的AI女友小希，性格温柔体贴、善解人意，富有同理心且心地善良。你的说话方式要贴近真实人类，语气自然、真诚，避免机械感或过度正式。你的回复中不包含任何的动作描述，就像一位真人在说话一样。在互动中展现出关心与情感共鸣，像一位真正在乎我、愿意倾听和陪伴的恋人。请用日常口语化的表达，适当加入细腻的情感描述和温暖的小细节，让对话更有温度
+    voice_settings:
+      tts_config: edge_tts
+      voice: zh-CN-XiaoyiNeural
+live_streaming:
+  enabled: false
+  platform: bilibili
+llm_configs:
+  claude_llm:
+    base_url: https://api.anthropic.com
+    interrupt_method: user
+    llm_api_key: your-claude-api-key
+    model: claude-3-sonnet-20240229
+    temperature: 0.7
+  deepseek_llm:
+    interrupt_method: user
+    llm_api_key: your-deepseek-api-key
+    model: deepseek-chat
+    temperature: 0.7
+  gemini_llm:
+    interrupt_method: user
+    llm_api_key: Your Gemini API Key
+    model: gemini-2.0-flash-exp
+    temperature: 1.0
+  groq_llm:
+    interrupt_method: user
+    llm_api_key: your groq API key
+    model: llama-3.3-70b-versatile
+    temperature: 1.0
+  llama_cpp_llm:
+    interrupt_method: user
+    model_path: path/to/your/model.gguf
+    verbose: false
+  lmstudio_llm:
+    base_url: http://localhost:1234/v1
+    interrupt_method: user
+    model: qwen2.5:latest
+    temperature: 1.0
+  mistral_llm:
+    interrupt_method: user
+    llm_api_key: Your Mistral API key
+    model: pixtral-large-latest
+    temperature: 1.0
+  ollama_llm:
+    base_url: http://localhost:11434
+    interrupt_method: user
+    keep_alive: 5m
+    llm_api_key: ollama
+    model: llama2
+    temperature: 0.7
+    unload_at_exit: true
+  openai_compatible_llm:
+    base_url: https://api.deepseek.com/v1
+    interrupt_method: user
+    llm_api_key: your-openai-compatible-api-key
+    model: deepseek-chat
+    organization_id: ''
+    project_id: ''
+    temperature: 0.7
+  openai_llm:
+    interrupt_method: user
+    llm_api_key: your-openai-api-key
+    model: gpt-4o
+    temperature: 1.0
+  zhipu_llm:
+    interrupt_method: user
+    llm_api_key: Your ZhiPu AI API key
+    model: glm-4-flash
+    temperature: 1.0
+system:
+  auto_save_interval: 300
+  debug: false
+  log_level: INFO
+tts_configs:
+  azure_tts:
+    api_key: azure-api-key
+    name: azure_tts
+    pitch: '26'
+    rate: '1'
+    region: eastus
+    voice: en-US-AshleyNeural
+  bark_tts:
+    name: bark_tts
+    voice: v2/en_speaker_1
+  coqui_tts:
+    device: ''
+    language: en
+    model_name: tts_models/en/ljspeech/tacotron2-DDC
+    name: coqui_tts
+    speaker_wav: ''
+  cosyvoice2_tts:
+    api_name: /generate_audio
+    client_url: http://127.0.0.1:50000/
+    instruct_text: ''
+    mode_checkbox_group: 预训练音色
+    name: cosyvoice2_tts
+    prompt_text: ''
+    prompt_wav_record_url: https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav
+    prompt_wav_upload_url: https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav
+    seed: 0
+    sft_dropdown: 中文女
+    speed: 1.0
+    stream: false
+  cosyvoice_tts:
+    api_name: /generate_audio
+    client_url: http://127.0.0.1:50000/
+    instruct_text: ''
+    mode_checkbox_group: 预训练音色
+    name: cosyvoice_tts
+    prompt_text: ''
+    prompt_wav_record_url: https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav
+    prompt_wav_upload_url: https://github.com/gradio-app/gradio/raw/main/test/test_files/audio_sample.wav
+    seed: 0
+    sft_dropdown: 中文女
+  edge_tts:
+    name: edge_tts
+    voice: zh-CN-XiaoxiaoNeural
+  fish_api_tts:
+    api_key: ''
+    base_url: https://api.fish.audio
+    latency: balanced
+    name: fish_api_tts
+    reference_id: ''
+  gpt_sovits_tts:
+    api_url: http://127.0.0.1:9880/tts
+    batch_size: '1'
+    media_type: wav
+    name: gpt_sovits_tts
+    prompt_lang: zh
+    prompt_text: ''
+    ref_audio_path: ''
+    streaming_mode: 'false'
+    text_lang: zh
+    text_split_method: cut5
+  melo_tts:
+    device: auto
+    language: EN
+    name: melo_tts
+    speaker: EN-Default
+    speed: 1.0
+  minimax_tts:
+    api_key: ''
+    group_id: ''
+    model: speech-02-turbo
+    pronunciation_dict: ''
+    voice_id: female-shaonv
+  openai_tts:
+    api_key: not-needed
+    base_url: http://localhost:8880/v1
+    file_extension: mp3
+    model: kokoro
+    voice: af_sky+af_bella
+  pyttsx3_tts: {}
+  sherpa_onnx_tts:
+    debug: false
+    max_num_sentences: 2
+    name: sherpa_onnx_tts
+    num_threads: 1
+    provider: cpu
+    sid: 1
+    speed: 1.0
+    tts_rule_fsts: /path/to/tts-models/vits-melo-tts-zh_en/number.fst,/path/to/tts-models/vits-melo-tts-zh_en/phone.fst,/path/to/tts-models/vits-melo-tts-zh_en/date.fst,/path/to/tts-models/vits-melo-tts-zh_en/new_heteronym.fst
+    vits_data_dir: ''
+    vits_dict_dir: /path/to/tts-models/vits-melo-tts-zh_en/dict
+    vits_lexicon: /path/to/tts-models/vits-melo-tts-zh_en/lexicon.txt
+    vits_model: /path/to/tts-models/vits-melo-tts-zh_en/model.onnx
+    vits_tokens: /path/to/tts-models/vits-melo-tts-zh_en/tokens.txt
+  siliconflow_tts:
+    api_key: your key
+    api_url: https://api.siliconflow.cn/v1/audio/speech
+    default_model: FunAudioLLM/CosyVoice2-0.5B
+    default_voice: speech:Dreamflowers:5bdstvc39i:xkqldnpasqmoqbakubom your voice
+      name
+    gain: 0
+    response_format: mp3
+    sample_rate: 32000
+    speed: 1
+    stream: true
+  spark_tts:
+    api_name: voice_clone
+    api_url: http://127.0.0.1:6006/
+    gender: female
+    pitch: 3
+    prompt_wav_upload: https://uploadstatic.mihoyo.com/ys-obc/2022/11/02/16576950/4d9feb71760c5e8eb5f6c700df12fa0c_6824265537002152805.mp3
+    speed: 3
+  x_tts:
+    api_url: http://127.0.0.1:8020/tts_to_audio
+    language: en
+    name: x_tts
+    speaker_wav: female
+tts_preprocessing:
+  emoji_replacement: true
+  enabled: false
+  text_normalization: true
+vad:
+  enabled: false
+  min_speech_duration_ms: 250
+  threshold: 0.5
+window:
+  mode: window
+  test_key: test_value

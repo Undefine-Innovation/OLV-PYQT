@@ -1,0 +1,7 @@
+{
+  "asr": "sherpa_onnx_asr",
+  "character": "default",
+  "llm": "openai_compatible_llm",
+  "tts": "edge_tts",
+  "character_path": "C:/Users/com01/Desktop/newproj/myllmapp-useAPI/Resources/v3/Mao/Mao.model3.json"
+}

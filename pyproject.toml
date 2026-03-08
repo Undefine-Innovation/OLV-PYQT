@@ -1,19 +1,23 @@
 [project]
-name = "myllmapp"
+name = "olv-pyqt"
 version = "0.1.0"
-description = "Add your description here"
+description = "Open-LLM-VTuber PyQt Desktop Application"
 requires-python = ">=3.12"
 dependencies = [
-    "edge-tts==7.0.2",
+    "pyside6>=6.6.0",
+    "qasync>=0.23.0",
     "loguru>=0.7.3",
     "numpy>=2.3.1",
-    "onnxruntime==1.22.0",
-    "openai==1.93.0",
-    "requests==2.32.4",
-    "scipy>=1.16.0",
-    "sherpa-onnx>=1.12.2",
-    "sounddevice==0.5.2",
+    "sounddevice>=0.5.0",
     "soundfile>=0.13.1",
-    "tqdm==4.66.3",
+    "pyaudio>=0.2.13",
+    "silero-vad>=5.0.0",
+    "torch>=2.0.0",
+    "setuptools>=65.0.0",
+    "pyyaml>=6.0",
     "websocket-client>=1.8.0",
+    "newpy>=1.1.16",
 ]
+
+[tool.setuptools]
+packages = ["OQWindows", "OQController", "OQConfig", "OQBackend", "OQSettings", "OQMainBackend"]

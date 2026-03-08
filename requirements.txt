@@ -1,49 +1,16 @@
-# Requirements for myllmapp
-# Grouped by intent to make reviewing easier.
+# Requirements for OLV-PYQT
+# Synced with pyproject.toml dependencies
 
-# Core UI / runtime stack
-PyQt5>=5.15.9
-PyQt5-Qt5>=5.15.9
-PyQt5-sip>=12.11.0
+pyside6>=6.6.0
 qasync>=0.23.0
 loguru>=0.7.3
-
-# HTTP/LLM integrations
-fastapi>=0.110.0
-httpx[speedups]>=0.27.0
-openai==1.93.0
-requests==2.32.4
-websocket-client>=1.8.0
-websockets>=11.0
-anthropic>=0.0.12
-groq>=1.4.2
-# Voice / audio backends
-edge-tts==7.0.2
-azure-cognitiveservices-speech>=1.19.1
-bark>=1.0.0
-fish-audio-sdk>=1.0.5
-gradio-client>=0.15.0
-silero-vad>=1.1
-webrtcvad>=2.0.10
-pydub>=0.25.1
-pyaudio>=0.2.13
-
-# Local inference helpers
-faster-whisper>=0.4.0
-openai-whisper>=2024.8.1
-pywhispercpp>=0.3.0
-funasr>=0.4.4
-llama-cpp-python>=0.1.89
-sherpa-onnx>=1.12.2
-torch>=2.3.0
-
-# Utilities
 numpy>=2.3.1
-scipy>=1.16.0
-onnxruntime==1.22.0
+sounddevice>=0.5.0
+soundfile>=0.13.1
+pyaudio>=0.2.13
+silero-vad>=5.0.0
+torch>=2.0.0
+setuptools>=65.0.0
 pyyaml>=6.0
-ruamel-yaml>=0.17.34
-pysbd>=0.3.4
-pyttsx3>=2.90
-tomli>=2.0.1
-tqdm==4.66.3
+websocket-client>=1.8.0
+newpy>=1.1.16

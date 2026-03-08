@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MyLLMApp (OLV-PYQT) is a Live2D-powered PyQt5 desktop application that integrates ASR (Automatic Speech Recognition), TTS (Text-to-Speech), and LLM backends for an interactive VTuber-style chat experience. The application uses WebSocket communication between the Qt frontend and backend services.
+OLV-PYQT (Open-LLM-VTuber PyQt) is a Live2D-powered PySide6 desktop application that integrates ASR (Automatic Speech Recognition), TTS (Text-to-Speech), and LLM backends for an interactive VTuber-style chat experience. The application uses WebSocket communication between the Qt frontend and backend services.
 
 ## Development Commands
 

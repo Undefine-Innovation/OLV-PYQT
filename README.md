@@ -1,6 +1,6 @@
-# MyLLMApp (Open-Ready)
+# OLV-PYQT
 
-MyLLMApp is a hybrid Live2D + PyQt frontend that wires together ASR, TTS, and LLM adapters for an interactive VTuber-style chat experience. This repository ships the Qt GUI (`OQWindows`), backend controllers (`OQController`), and configuration machinery (`OQConfig`) needed to run a responsive character with pluggable speech, voice, and chat providers.
+OLV-QT is a hybrid Live2D + PyQt frontend that wires together ASR, TTS, and LLM adapters for an interactive VTuber-style chat experience. This repository ships the Qt GUI (`OQWindows`), backend controllers (`OQController`), and configuration machinery (`OQConfig`) needed to run a responsive character with pluggable speech, voice, and chat providers.
 
 ## Highlights
 1. **Live2D-powered interface** — Qt windows render a Live2D mesh while `WSController` orchestrates transcription, synthesis, and expression updates.
